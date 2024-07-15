@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Encuesta de Organización</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+        }
+        .container {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin: 10px 0 5px;
+            font-size: 14px;
+            color: #555555;
+        }
+        select, input[type="submit"] {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #dddddd;
+            border-radius: 5px;
+            background: #ffffff;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            background: #007bff;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        input[type="submit"]:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Encuesta de Organización</h1>
+        <form action="http://localhost:5000/submit" method="post">
+            <label for="ciclo">Ciclo:</label>
+            <select name="ciclo" id="ciclo">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+
+            <label for="carrera">Carrera:</label>
+            <select name="carrera" id="carrera">
+                <option value="Administración y Negocios Digitales">Administración y Negocios Digitales</option>
+                <option value="Bioingeniería">Bioingeniería</option>
+                <option value="Ciencia de la Computación">Ciencia de la Computación</option>
+                <option value="Ciencia de Datos">Ciencia de Datos</option>
+                <option value="Ingeniería Ambiental">Ingeniería Ambiental</option>
+                <option value="Ingeniería Civil">Ingeniería Civil</option>
+                <option value="Ingeniería de la Energía">Ingeniería de la Energía</option>
+                <option value="Ingeniería Electrónica">Ingeniería Electrónica</option>
+                <option value="Ingeniería Industrial">Ingeniería Industrial</option>
+                <option value="Ingeniería Mecánica">Ingeniería Mecánica</option>
+                <option value="Ingeniería Mecatrónica">Ingeniería Mecatrónica</option>
+                <option value="Ingeniería Química">Ingeniería Química</option>
+            </select>
+
+            <label for="num_cursos">Número de Cursos:</label>
+            <select name="num_cursos" id="num_cursos">
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+            </select>
+
+            <label for="h_estudio_sem">Horas de Estudio por Semana:</label>
+            <select name="h_estudio_sem" id="h_estudio_sem">
+                <option value="20">20</option>
+                <option value="15">15</option>
+                <option value="10">10</option>
+                <option value="5">5</option>
+                <option value="0">0</option>
+            </select>
+
+            <label for="h_redes_dia">Horas en Redes Sociales por Día:</label>
+            <select name="h_redes_dia" id="h_redes_dia">
+                <option value="8">8</option>
+                <option value="6">6</option>
+                <option value="4">4</option>
+                <option value="2">2</option>
+                <option value="0">0</option>
+            </select>
+
+            <label for="tiempo_libre">Tiempo Libre:</label>
+            <select name="tiempo_libre" id="tiempo_libre">
+                <option value="Aprovecho en estudiar para mis cursos">Aprovecho en estudiar para mis cursos</option>
+                <option value="Repaso brevemente un curso">Repaso brevemente un curso</option>
+                <option value="Avanzo tareas cortas">Avanzo tareas cortas</option>
+                <option value="Veo mi celular para distraerme">Veo mi celular para distraerme</option>
+                <option value="Salgo de fiesta">Salgo de fiesta</option>
+            </select>
+
+            <label for="metodo_organizacion">Método de Organización:</label>
+            <select name="metodo_organizacion" id="metodo_organizacion">
+                <option value="Priorizar cursos de carrera">Priorizar cursos de carrera</option>
+                <option value="Armar planes de estudio">Armar planes de estudio</option>
+                <option value="Coincidir con el horario de los amigos">Coincidir con el horario de los amigos</option>
+                <option value="Meterse a la mayor cantidad de cursos posibles">Meterse a la mayor cantidad de cursos posibles</option>
+                <option value="Elegir al azar los cursos">Elegir al azar los cursos</option>
+            </select>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+</body>
+</html>
